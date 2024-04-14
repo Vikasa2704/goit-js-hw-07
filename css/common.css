@@ -14,15 +14,19 @@ body {
 }
 .gallery {
   display: flex;
-  list-style: none;
-  padding: 0;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+  width: 1440px;
+  height: 848px;
+  padding: 100px 156px;
 }
 
 .gallery li {
-  margin: 5px;
+  list-style: none;
 }
 
 .gallery img {
-  max-width: 100%;
-  height: auto;
+  width: 360px;
+  height: 300px;
 }
