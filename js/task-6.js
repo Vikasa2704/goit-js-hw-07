@@ -18,19 +18,20 @@ function createBoxes() {
     return;
   }
 
-  clearBoxes();
+  clearBoxes(); // Очищаю колекцію перед створенням нових квадратів
 
   let size = 30;
+  const fragment = document.createDocumentFragment(); // Створюю фрагмент для зберігання елементів перед додаванням до DOM
   for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
     box.classList.add('box');
     box.style.width = `${size}px`;
     box.style.height = `${size}px`;
     box.style.backgroundColor = getRandomHexColor();
-    boxesContainer.appendChild(box);
+    fragment.appendChild(box); // Додаю блок до фрагменту
     size += 10;
   }
-
+  boxesContainer.appendChild(fragment);
   input.value = '';
 }
 
